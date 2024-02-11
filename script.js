@@ -12,7 +12,7 @@ const humidityBox = document.querySelector(".humidity-box");
 const humidityValue = document.querySelector(".humidity-box .value");
 const windValue = document.querySelector(".wind-box .value");
 
-const API_KEY = "25db2d802357726654455b17366a17ad";
+const API_KEY = "API_KEY";
 
 const roundToNearestWhole = (number) => {
   return Math.round(number);
