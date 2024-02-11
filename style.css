@@ -1,0 +1,1458 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  background: linear-gradient(to bottom, #2177b1, #9bd1f5);
+  color: #fff;
+}
+
+body.cloudy {
+  background: linear-gradient(to bottom, #3f3f3f, #a2afb1);
+}
+
+
+
+body.cloudy .h2,
+body.cloudy .h3,
+body.cloudy .h6 {
+  background-color: transparent;
+}
+body.cloudy .sunrise,
+body.cloudy .sunset,
+body.cloudy .feels-like, 
+body.cloudy .pressure-box, 
+body.cloudy .visibility-box,
+body.cloudy .humidity-box,
+body.cloudy .wind-box {
+  color: #000;
+}
+
+body.cloudy .wind-box,
+body.cloudy .humidity-box,
+body.cloudy .city-input, 
+body.cloudy .additional-info-box,
+body.cloudy .city-input,
+body.cloudy .search-btn,
+body.cloudy .location-btn,
+body.cloudy .current-weather,
+body.cloudy .card,
+body.cloudy .forecast-title,
+body.cloudy .forecast-items,
+body.cloudy .forecast-item {
+  color: #000;
+  background-color: #a2afb1;
+  border-radius: 10px;
+}
+
+body.rainy {
+  background: linear-gradient(to bottom, #2c3e50, #598abb);
+}
+
+
+body.rainy .rain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 9999;
+}
+body.rainy .drop {
+  position: absolute;
+  width: 2px;
+  height: 10px;
+  background: #ffffff;
+  opacity: 0.7;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+  }
+}
+
+body.rainy .drop:nth-child(1) {
+  left: 2%;
+  animation-duration: 0.75s;
+}
+
+body.rainy .drop:nth-child(2) {
+  left: 4%;
+  animation-duration: 1s;
+}
+
+body.rainy .drop:nth-child(3) {
+  left: 6%;
+  animation-duration: 0.9s;
+}
+
+body.rainy .drop:nth-child(4) {
+  left: 8%;
+  animation-duration: 0.8s;
+}
+
+body.rainy .drop:nth-child(5) {
+  left: 10%;
+  animation-duration: 1.1s;
+}
+
+body.rainy .drop:nth-child(6) {
+  left: 12%;
+  animation-duration: 0.95s;
+}
+
+body.rainy .drop:nth-child(7) {
+  left: 14%;
+  animation-duration: 1.2s;
+}
+
+body.rainy .drop:nth-child(8) {
+  left: 16%;
+  animation-duration: 1s;
+}
+
+body.rainy .drop:nth-child(9) {
+  left: 18%;
+  animation-duration: 1.15s;
+}
+
+body.rainy .drop:nth-child(10) {
+  left: 20%;
+  animation-duration: 0.85s;
+}
+
+body.rainy .drop:nth-child(11) {
+  left: 22%;
+  animation-duration: 0.85s;
+}
+
+body.rainy .drop:nth-child(12) {
+  left: 24%;
+  animation-duration: 1.35s;
+}
+
+body.rainy .drop:nth-child(13) {
+  left: 26%;
+  animation-duration: 1.26s;
+}
+
+body.rainy .drop:nth-child(14) {
+  left: 28%;
+  animation-duration: 0.83s;
+}
+
+body.rainy .drop:nth-child(15) {
+  left: 30%;
+  animation-duration: 0.95s;
+}
+
+body.rainy .drop:nth-child(16) {
+  left: 32%;
+  animation-duration: 0.85s;
+}
+
+body.rainy .drop:nth-child(17) {
+  left: 34%;
+  animation-duration: 1.10s;
+}
+
+body.rainy .drop:nth-child(18) {
+  left: 36%;
+  animation-duration: 1.23s;
+}
+
+body.rainy .drop:nth-child(19) {
+  left: 38%;
+  animation-duration: 1.3s;
+}
+
+body.rainy .drop:nth-child(20) {
+  left: 40%;
+  animation-duration: 0.71s;
+}
+
+body.rainy .drop:nth-child(21) {
+  left: 42%;
+  animation-duration: 0.91s;
+}
+
+body.rainy .drop:nth-child(22) {
+  left: 44%;
+  animation-duration: 1.20s;
+}
+
+body.rainy .drop:nth-child(23) {
+  left: 46%;
+  animation-duration: 1.21s;
+}
+
+body.rainy .drop:nth-child(24) {
+  left: 48%;
+  animation-duration: 0.79s;
+}
+
+body.rainy .drop:nth-child(25) {
+  left: 50%;
+  animation-duration: 0.46s;
+}
+
+body.rainy .drop:nth-child(26) {
+  left: 52%;
+  animation-duration: 0.88s;
+}
+
+body.rainy .drop:nth-child(27) {
+  left: 54%;
+  animation-duration: 1.15s;
+}
+
+body.rainy .drop:nth-child(28) {
+  left: 56%;
+  animation-duration: 1.05s;
+}
+
+body.rainy .drop:nth-child(29) {
+  left: 58%;
+  animation-duration: 0.92s;
+}
+
+body.rainy .drop:nth-child(30) {
+  left: 60%;
+  animation-duration: 1.12s;
+}
+
+body.rainy .drop:nth-child(31) {
+  left: 62%;
+  animation-duration: 0.75s;
+}
+
+body.rainy .drop:nth-child(32) {
+  left: 64%;
+  animation-duration: 1.23s;
+}
+
+body.rainy .drop:nth-child(33) {
+  left: 66%;
+  animation-duration: 1.15s;
+}
+
+body.rainy .drop:nth-child(34) {
+  left: 68%;
+  animation-duration: 0.84s;
+}
+
+body.rainy .drop:nth-child(35) {
+  left: 70%;
+  animation-duration: 0.97s;
+}
+
+body.rainy .drop:nth-child(36) {
+  left: 72%;
+  animation-duration: 1.08s;
+}
+
+body.rainy .drop:nth-child(37) {
+  left: 74%;
+  animation-duration: 0.91s;
+}
+
+body.rainy .drop:nth-child(38) {
+  left: 76%;
+  animation-duration: 1.05s;
+}
+
+body.rainy .drop:nth-child(39) {
+  left: 78%;
+  animation-duration: 0.79s;
+}
+
+body.rainy .drop:nth-child(40) {
+  left: 80%;
+  animation-duration: 0.92s;
+}
+
+body.rainy .drop:nth-child(41) {
+  left: 82%;
+  animation-duration: 1.14s;
+}
+
+body.rainy .drop:nth-child(42) {
+  left: 84%;
+  animation-duration: 1.02s;
+}
+
+body.rainy .drop:nth-child(43) {
+  left: 86%;
+  animation-duration: 1.25s;
+}
+
+body.rainy .drop:nth-child(44) {
+  left: 88%;
+  animation-duration: 0.86s;
+}
+
+body.rainy .drop:nth-child(45) {
+  left: 90%;
+  animation-duration: 1.03s;
+}
+
+body.rainy .drop:nth-child(46) {
+  left: 92%;
+  animation-duration: 0.95s;
+}
+
+body.rainy .drop:nth-child(47) {
+  left: 94%;
+  animation-duration: 1.1s;
+}
+
+body.rainy .drop:nth-child(48) {
+  left: 96%;
+  animation-duration: 1.17s;
+}
+
+body.rainy .drop:nth-child(49) {
+  left: 98%;
+  animation-duration: 1.09s;
+}
+
+body.rainy .drop:nth-child(50) {
+  left: 100%;
+  animation-duration: 0.65s;
+}
+
+body.rainy .drop:nth-child(51) {
+  left: 102%;
+  animation-duration: 0.75s;
+}
+
+body.rainy .drop:nth-child(52) {
+  left: 104%;
+  animation-duration: 1s;
+}
+
+body.rainy .drop:nth-child(53) {
+  left: 106%;
+  animation-duration: 0.9s;
+}
+
+body.rainy .drop:nth-child(54) {
+  left: 108%;
+  animation-duration: 0.8s;
+}
+
+body.rainy .drop:nth-child(55) {
+  left: 110%;
+  animation-duration: 1.1s;
+}
+
+body.rainy .drop:nth-child(56) {
+  left: 112%;
+  animation-duration: 0.95s;
+}
+
+body.rainy .drop:nth-child(57) {
+  left: 114%;
+  animation-duration: 1.2s;
+}
+
+body.rainy .drop:nth-child(58) {
+  left: 116%;
+  animation-duration: 1s;
+}
+
+body.rainy .drop:nth-child(59) {
+  left: 118%;
+  animation-duration: 1.15s;
+}
+
+body.rainy .drop:nth-child(60) {
+  left: 120%;
+  animation-duration: 0.85s;
+}
+
+body.rainy .drop:nth-child(61) {
+  left: 122%;
+  animation-duration: 0.85s;
+}
+
+body.rainy .drop:nth-child(62) {
+  left: 124%;
+  animation-duration: 1.35s;
+}
+
+body.rainy .drop:nth-child(63) {
+  left: 126%;
+  animation-duration: 1.26s;
+}
+
+body.rainy .drop:nth-child(64) {
+  left: 128%;
+  animation-duration: 0.83s;
+}
+
+body.rainy .drop:nth-child(65) {
+  left: 130%;
+  animation-duration: 0.95s;
+}
+
+body.rainy .drop:nth-child(66) {
+  left: 132%;
+  animation-duration: 0.85s;
+}
+
+body.rainy .drop:nth-child(67) {
+  left: 134%;
+  animation-duration: 1.10s;
+}
+
+body.rainy .drop:nth-child(68) {
+  left: 136%;
+  animation-duration: 1.23s;
+}
+
+body.rainy .drop:nth-child(69) {
+  left: 138%;
+  animation-duration: 1.3s;
+}
+
+body.rainy .drop:nth-child(70) {
+  left: 140%;
+  animation-duration: 0.71s;
+}
+
+body.rainy .drop:nth-child(71) {
+  left: 142%;
+  animation-duration: 0.91s;
+}
+
+body.rainy .drop:nth-child(72) {
+  left: 144%;
+  animation-duration: 1.20s;
+}
+
+body.rainy .drop:nth-child(73) {
+  left: 146%;
+  animation-duration: 1.21s;
+}
+
+body.rainy .drop:nth-child(74) {
+  left: 148%;
+  animation-duration: 0.79s;
+}
+
+body.rainy .drop:nth-child(75) {
+  left: 150%;
+  animation-duration: 0.46s;
+}
+
+body.rainy .drop:nth-child(76) {
+  left: 152%;
+  animation-duration: 0.88s;
+}
+
+body.rainy .drop:nth-child(77) {
+  left: 154%;
+  animation-duration: 1.15s;
+}
+
+body.rainy .drop:nth-child(78) {
+  left: 156%;
+  animation-duration: 1.05s;
+}
+
+body.rainy .drop:nth-child(79) {
+  left: 158%;
+  animation-duration: 0.92s;
+}
+
+body.rainy .drop:nth-child(80) {
+  left: 160%;
+  animation-duration: 1.12s;
+}
+
+body.rainy .drop:nth-child(81) {
+  left: 162%;
+  animation-duration: 0.75s;
+}
+
+body.rainy .drop:nth-child(82) {
+  left: 164%;
+  animation-duration: 1.23s;
+}
+
+body.rainy .drop:nth-child(83) {
+  left: 166%;
+  animation-duration: 1.15s;
+}
+
+body.rainy .drop:nth-child(84) {
+  left: 168%;
+  animation-duration: 0.84s;
+}
+
+body.rainy .drop:nth-child(85) {
+  left: 170%;
+  animation-duration: 0.97s;
+}
+
+body.rainy .drop:nth-child(86) {
+  left: 172%;
+  animation-duration: 1.08s;
+}
+
+body.rainy .drop:nth-child(87) {
+  left: 174%;
+  animation-duration: 0.91s;
+}
+
+body.rainy .drop:nth-child(88) {
+  left: 176%;
+  animation-duration: 1.05s;
+}
+
+body.rainy .drop:nth-child(89) {
+  left: 178%;
+  animation-duration: 0.79s;
+}
+
+body.rainy .drop:nth-child(90) {
+  left: 180%;
+  animation-duration: 0.92s;
+}
+
+body.rainy .drop:nth-child(91) {
+  left: 182%;
+  animation-duration: 1.14s;
+}
+
+body.rainy .drop:nth-child(92) {
+  left: 184%;
+  animation-duration: 1.02s;
+}
+
+body.rainy .drop:nth-child(93) {
+  left: 186%;
+  animation-duration: 1.25s;
+}
+
+body.rainy .drop:nth-child(94) {
+  left: 188%;
+  animation-duration: 0.86s;
+}
+
+body.rainy .drop:nth-child(95) {
+  left: 190%;
+  animation-duration: 1.03s;
+}
+
+body.rainy .drop:nth-child(96) {
+  left: 192%;
+  animation-duration: 0.95s;
+}
+
+body.rainy .drop:nth-child(97) {
+  left: 194%;
+  animation-duration: 1.1s;
+}
+
+body.rainy .drop:nth-child(98) {
+  left: 196%;
+  animation-duration: 1.17s;
+}
+
+body.rainy .drop:nth-child(99) {
+  left: 198%;
+  animation-duration: 1.09s;
+}
+
+body.rainy .drop:nth-child(100) {
+  left: 200%;
+  animation-duration: 0.65s;
+}
+
+body.snowy {
+  background: linear-gradient(to bottom, #06042c, #a8c6f3);
+  }
+
+
+  body.snowy .city-input,
+  body.snowy .additional-info-box,
+  body.snowy .search-btn,
+  body.snowy .location-btn,
+  body.snowy .visibility-box,
+  body.snowy .feels-like-box,
+  body.snowy .pressure-box,
+  body.snowy .humidity-box,
+  body.snowy .wind-box,
+  body.snowy .current-weather,
+  body.snowy .card,
+  body.snowy .forecast-title,
+  body.snowy .forecast-items,
+  body.snowy .forecast-item {
+    background-color: #a2afb125;
+    color: #fff;
+    border-radius: 10px;
+  }
+
+  body.snowy  .snowflake {
+  color: #fff;
+  font-size: 1em;
+  font-family: Arial;
+  text-shadow: 0 0 1px #000;
+}
+
+
+@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@keyframes snowflakes-shake{0%{transform:translateX(0px)}50%{transform:translateX(80px)}100%{transform:translateX(0px)}}
+.snowflake {
+  position:fixed; 
+  top:-10%;
+  z-index:9999;
+  animation-name:snowflakes-fall,snowflakes-shake;
+  animation-timing-function:linear,ease-in-out;
+  animation-iteration-count:infinite,infinite;
+  animation-play-state:running,running
+}
+
+body.snowy .snowflake:nth-of-type(1) {
+  left: 1%;
+  animation-delay: 2.3s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(2) {
+  left: 2%;
+  animation-delay: 1.5s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(3) {
+  left: 3%;
+  animation-delay: 1s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(4) {
+  left: 4%;
+  animation-delay: 2.5s, 3;
+}
+
+body.snowy .snowflake:nth-of-type(5) {
+  left: 5%;
+  animation-delay: 2s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(6) {
+  left: 6%;
+  animation-delay: 1.5s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(7) {
+  left: 7%;
+  animation-duration: 3.625s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(8) {
+  left: 8%;
+  animation-duration: 2.3s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(9) {
+  left: 9%;
+  animation-duration: 2.9s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(10) {
+  left: 10%;
+  animation-duration: 2.3s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(11) {
+  left: 11%;
+  animation-duration: 1.3s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(12) {
+  left: 12%;
+  animation-duration: 1.5s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(13) {
+  left: 13%;
+  animation-duration: 1s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(14) {
+  left: 14%;
+  animation-duration: 3.5s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(15) {
+  left: 15%;
+  animation-duration: 2s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(16) {
+  left: 16%;
+  animation-duration: 1.5s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(17) {
+  left: 17%;
+  animation-duration: 2.625s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(18) {
+  left: 18%;
+  animation-duration: 1.3s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(19) {
+  left: 19%;
+  animation-duration: 2.9s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(20) {
+  left: 20%;
+  animation-duration: 3.3s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(21) {
+  left: 21%;
+  animation-duration: 1.5s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(22) {
+  left: 22%;
+  animation-duration: 1s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(23) {
+  left: 23%;
+  animation-duration: 3.5s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(24) {
+  left: 24%;
+  animation-duration: 2s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(25) {
+  left: 25%;
+  animation-duration: 1.5s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(26) {
+  left: 26%;
+  animation-duration: 1.625s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(27) {
+  left: 27%;
+  animation-duration: 2.3s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(28) {
+  left: 28%;
+  animation-duration: 2.9s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(29) {
+  left: 29%;
+  animation-duration: 3.3s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(30) {
+  left: 30%;
+  animation-duration: 2.3s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(31) {
+  left: 31%;
+  animation-duration: 1.5s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(32) {
+  left: 32%;
+  animation-duration: 1.26s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(33) {
+  left: 33%;
+  animation-duration: 3.5s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(34) {
+  left: 34%;
+  animation-duration: 2s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(35) {
+  left: 35%;
+  animation-duration: 3.5s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(36) {
+  left: 36%;
+  animation-duration: 2.625s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(37) {
+  left: 37%;
+  animation-duration: 1.3s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(38) {
+  left: 38%;
+  animation-duration: 1.9s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(39) {
+  left: 39%;
+  animation-duration: 2.3s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(40) {
+  left: 40%;
+  animation-duration: 1.5s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(41) {
+  left: 41%;
+  animation-duration: 1s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(42) {
+  left: 42%;
+  animation-duration: 1.5s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(43) {
+  left: 43%;
+  animation-duration: 2s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(44) {
+  left: 44%;
+  animation-duration: 1.5s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(45) {
+  left: 45%;
+  animation-duration: 1.625s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(46) {
+  left: 46%;
+  animation-duration: 2.3s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(47) {
+  left: 47%;
+  animation-duration: 1.9s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(48) {
+  left: 48%;
+  animation-duration: 1.3s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(49) {
+  left: 49%;
+  animation-duration: 2.3s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(50) {
+  left: 50%;
+  animation-duration: 1.5s, 3s;
+}
+body.snowy .snowflake:nth-of-type(51) {
+  left: 51%;
+  animation-duration: 1s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(52) {
+  left: 52%;
+  animation-duration: 1.5s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(53) {
+  left: 53%;
+  animation-duration: 2s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(54) {
+  left: 54%;
+  animation-duration: 1.5s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(55) {
+  left: 55%;
+  animation-duration: 1.625s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(56) {
+  left: 56%;
+  animation-duration: 2.3s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(57) {
+  left: 57%;
+  animation-duration: 1.9s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(58) {
+  left: 58%;
+  animation-duration: 1.3s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(59) {
+  left: 59%;
+  animation-duration: 2.3s, 3s;
+}
+body.snowy .snowflake:nth-of-type(60) {
+  left: 60%;
+  animation-duration: 1.5s, 3s;
+}
+body.snowy .snowflake:nth-of-type(61) {
+  left: 61%;
+  animation-duration: 1s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(62) {
+  left: 62%;
+  animation-duration: 1.5s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(63) {
+  left: 63%;
+  animation-duration: 2s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(64) {
+  left: 64%;
+  animation-duration: 1.5s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(65) {
+  left: 65%;
+  animation-duration: 1.625s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(66) {
+  left: 66%;
+  animation-duration: 2.3s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(67) {
+  left: 67%;
+  animation-duration: 1.9s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(68) {
+  left: 68%;
+  animation-duration: 1.3s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(69) {
+  left: 69%;
+  animation-duration: 2.3s, 3s;
+}
+body.snowy .snowflake:nth-of-type(70) {
+  left: 70%;
+  animation-duration: 1.5s, 3s;
+}
+body.snowy .snowflake:nth-of-type(71) {
+  left: 71%;
+  animation-duration: 1s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(72) {
+  left: 72%;
+  animation-duration: 1.5s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(73) {
+  left: 73%;
+  animation-duration: 2s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(74) {
+  left: 74%;
+  animation-duration: 1.5s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(75) {
+  left: 75%;
+  animation-duration: 1.625s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(76) {
+  left: 76%;
+  animation-duration: 2.3s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(77) {
+  left: 77%;
+  animation-duration: 1.9s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(78) {
+  left: 78%;
+  animation-duration: 1.3s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(79) {
+  left: 79%;
+  animation-duration: 2.3s, 3s;
+}
+body.snowy .snowflake:nth-of-type(80) {
+  left: 80%;
+  animation-duration: 1.5s, 3s;
+}
+body.snowy .snowflake:nth-of-type(81) {
+  left: 81%;
+  animation-duration: 1s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(82) {
+  left: 82%;
+  animation-duration: 1.5s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(83) {
+  left: 83%;
+  animation-duration: 2s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(84) {
+  left: 84%;
+  animation-duration: 1.5s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(85) {
+  left: 85%;
+  animation-duration: 1.625s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(86) {
+  left: 86%;
+  animation-duration: 2.3s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(87) {
+  left: 87%;
+  animation-duration: 1.9s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(88) {
+  left: 88%;
+  animation-duration: 1.3s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(89) {
+  left: 89%;
+  animation-duration: 2.3s, 3s;
+}
+body.snowy .snowflake:nth-of-type(90) {
+  left: 90%;
+  animation-duration: 1.5s, 3s;
+}
+body.snowy .snowflake:nth-of-type(91) {
+  left: 91%;
+  animation-duration: 1s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(92) {
+  left: 92%;
+  animation-duration: 1.5s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(93) {
+  left: 93%;
+  animation-duration: 2s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(94) {
+  left: 94%;
+  animation-duration: 1.5s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(95) {
+  left: 95%;
+  animation-duration: 1.625s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(96) {
+  left: 96%;
+  animation-duration: 2.3s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(97) {
+  left: 97%;
+  animation-duration: 1.9s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(98) {
+  left: 98%;
+  animation-duration: 1.3s, 3s;
+}
+
+body.snowy .snowflake:nth-of-type(99) {
+  left: 99%;
+  animation-duration: 2.3s, 3s;
+}
+body.snowy .snowflake:nth-of-type(100) {
+  left: 100%;
+  animation-duration: 2.3s, 3s;
+}
+
+.humidity-box,
+ .wind-box,
+.city-input,
+.additional-info-box,
+ .search-btn,
+ .sunrise-box,
+ .visibility-box,
+ .feels-like-box,
+ .pressure-box,
+ .current-weather,
+ .card,
+ .forecast-title,
+ .forecast-items,
+ .forecast-item {
+  background-color: #fafafa27;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.humidity {
+  display: flex;
+  align-items: center;
+}
+
+.humidity-icon {
+  width: 20px;
+  height: auto;
+  margin-right: 5px;
+}
+
+.humidity h6 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.humidity h6 img {
+  width: 20px;
+  height: auto;
+  margin-right: 5px;
+}
+
+.wind {
+  display: flex;
+  align-items: center;
+}
+
+.wind-icon {
+  width: 20px;
+  height: auto;
+  margin-right: 5px;
+}
+
+.wind h6 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.wind h6 img {
+  width: 20px;
+  height: auto;
+  margin-right: 5px;
+}
+
+
+.container {
+  display: flex;
+  gap: 35px;
+  padding: 30px;
+}
+
+.weather-input {
+  width: 550px;
+  
+}
+
+.weather-input input {
+  height: 46px;
+  width: 100%;
+  outline: none;
+  font-size: 1.07rem;
+  padding: 0 17px;
+  margin: 10px 0 20px 0;
+  border-radius: 4px;
+}
+
+.weather-input input:focus {
+  padding: 0 16px;
+  border: 2px solid #2a455f;
+}
+
+.city-input {
+  border-radius: 5px;
+}
+
+.weather-input button {
+  width: 100%;
+  padding: 10px 0;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #ffffff;
+  transition: 0.2s ease;
+}
+
+.weather-input .search-btn:hover {
+  background: #2c52ed;
+}
+
+.weather-data {
+  width: 100%;
+}
+
+.weather-data .current-weather {
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px 70px 20px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.current-weather h2 {
+  font-weight: 700;
+  font-size: 1.7rem;
+}
+
+
+.weather-data h6 {
+  margin-top: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.current-weather .icon {
+  text-align: center;
+}
+
+.current-weather .icon img {
+  max-width: 120px;
+  margin-top: -15px;
+}
+
+.weather-icon {
+  max-width: 120px;
+}
+
+.current-weather .icon h6 {
+  margin-top: -10px;
+  text-transform: capitalize;
+}
+
+.feels-like-box,
+.visibility-box,
+.pressure-box {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+
+
+.additional-info-box {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 5px;
+  padding: 20px; 
+}
+
+.feels-like-box,
+.pressure-box,
+.visibility-box {
+  flex: 1;
+}
+
+.feels-like h6,
+.pressure h6,
+.forecast-title {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.sunrise-box {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+
+.sunrise,
+.sunset {
+  text-align: center;
+}
+
+.sunrise h4,
+.sunset h4 {
+  margin-bottom: 5px;
+}
+
+.sunrise h6,
+.sunset h6 {
+  margin: 0;
+}
+
+.sunrise-box {
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+}
+
+.sunrise h5,
+.sunset h5 {
+  margin: 5px 0;
+}
+
+.humidity-box,
+.wind-box {
+  display: inline-block;
+  width: 200px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 20px;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+
+.humidity-box h3,
+.wind-box h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.humidity-box .value,
+.wind-box .value {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.humidity-box .unit,
+.wind-box .unit {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+
+.days-forecast {
+  width: 500px;
+  margin-top: 20px;
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 80%;
+}
+
+
+.weather-card-icon {
+  width: 100px;
+}
+.weather-cards {
+  display: flex;
+  gap: 20px;
+  width: 300px;
+}
+
+.weather-cards .card {
+  padding: 18px 16px;
+  list-style: none;
+  border-radius: 5px;
+}
+
+
+@media (max-width: 1400px) {
+  .weather-data .current-weather {
+    padding: 20px;
+  }
+  .weather-cards {
+    flex-wrap: wrap;
+  }
+  .weather-cards .card {
+    width: calc(100% / 4 - 15px);
+  }
+}
+
+@media (max-width: 1200px) {
+  .weather-cards .card {
+    width: calc(100% / 3 - 15px);
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 950px) {
+  .weather-input {
+    width: 450px;
+  }
+  .weather-cards .card {
+    width: calc(100% / 2 - 10px);
+  }
+}
+
+@media (max-width: 750px) {
+  h1 {
+    font-size: 1.45rem;
+    padding: 16px 0;
+  }
+  .container {
+    flex-wrap: wrap;
+    padding: 15px;
+  }
+  .weather-input {
+    width: 100%;
+  }
+  .weather-data h2 {
+    font-size: 1.35rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .weather-input {
+    width: 100%;
+  }
+
+  .additional-info-box,
+  .feels-like-box,
+  .pressure-box,
+  .visibility-box {
+    width: 100%;
+  }
+}

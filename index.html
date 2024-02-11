@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Weather app </title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="script.js" defer></script>
+  <link rel="icon"
+    href="https://cdn.discordapp.com/attachments/1102014724683604018/1181410964650864721/image.png?ex=6580f5b3&is=656e80b3&hm=4801544d998510038b79f49818e383f61c0507ed057e7a958e917ed68e1a3b0e&">
+</head>
+<body>
+  <div class="snow">
+    <div class="snowflake"></div>
+  </div>
+  <div class="container">
+    <div class="weather-input">
+      <input class="city-input" type="text" placeholder="Search city...">
+      <button class="search-btn">Search</button>
+    </div>
+    <div class="weather-data">
+      <div class="current-weather">
+        <div class="details">
+          <h2>_______ ( ______ )</h2>
+          <h6>Temperature: __°F</h6>
+        </div>
+      </div>
+      <div class="additional-info-box">
+        <div class="sunrise-box">
+          <div class="sunrise">
+            <h3>Sunrise</h3>
+            <h3>☀️</h3>
+            <h4>--:--</h4>
+          </div>
+          <div class="sunset">
+            <h3>Sunset</h3>
+            <h3>🌙</h3>
+            <h4>--:--</h4>
+          </div>
+        </div>
+        <div class="feels-like-box">
+          <h6 class="feels-like">&#127777Feels Like: __°F</h6>
+        </div>
+        <div class="visibility-box">
+          <h6 class="visibility">👁️Visibility: __ mi</h6>
+        </div>
+        <div class="pressure-box">
+          <h6 class="pressure">🕓Pressure: __ hPa</h6>
+        </div>
+      </div>
+      <div class="wind-box">
+        <div class="wind">
+          <img class="wind-icon" src="images/wind.png">
+          <h6>Wind: __ M/S</h6>
+        </div>
+      </div>
+      <div class="humidity-box">
+        <div class="humidity">
+          <img class="humidity-icon" src="images/humidity.png">
+          <h6> Humidity: __%</h6>
+        </div>
+      </div>
+      <div class="days-forecast">
+        <h2>5 Day Forecast</h2>
+        <ul class="weather-cards">
+          <li class="card">
+            <h3>( ______ )</h3>
+            <h6>&#127777Temp: __°F</h6>
+          </li>
+          <li class="card">
+            <h3>( ______ )</h3>
+            <h6>&#127777Temp: __°F</h6>
+          </li>
+          <li class="card">
+            <h3>( ______ )</h3>
+            <h6>&#127777Temp: __°F</h6>
+          </li>
+          <li class="card">
+            <h3>( ______ )</h3>
+            <h6>&#127777Temp: __°F</h6>
+          </li>
+          <li class="card">
+            <h3>( ______ )</h3>
+            <h6>&#127777Temp: __°F</h6>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
